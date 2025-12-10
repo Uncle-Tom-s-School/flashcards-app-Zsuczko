@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Card from "./components/Card";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <main className="bg-linear-to-r from-bg-color-1 to-bg-color-2 w-screen h-screen flex justify-center items-center">
+        <Card></Card>
+
+        <button className="bg-white p-5 text-xl font-bold rounded-2xl absolute bottom-30 right-2">
+          Új gyakorlás indítása
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <button className="bg-white p-5 text-xl font-bold rounded-2xl absolute bottom-10 right-2">
+          Új kártya hozzáadása
+        </button>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

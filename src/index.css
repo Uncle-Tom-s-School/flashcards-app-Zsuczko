@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
   font-family: "Roboto";
@@ -13,4 +13,52 @@
 body{
   width: 100%;
   min-height: 100vh;
+} */
+@import "tailwindcss";
+
+@theme {
+  --color-green-en: #66CB92;
+--color-red-en: #FF9396;
+
+--color-bg-color-1: #FC00FF;
+--color-bg-color-2: #00DBDE;
+}
+
+.card-wrapper {
+  perspective: 1000px;
+  width: 20em;
+  height: 23em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+.card.faceDown {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
 }
