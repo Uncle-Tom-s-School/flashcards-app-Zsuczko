@@ -32,9 +32,18 @@ function App() {
   return (
     <>
       <MainContext.Provider value={{ place, setPlace }}>
-        <main className="bg-linear-to-r from-bg-color-1 to-bg-color-2 w-screen h-screen flex justify-center items-center">
+        <main className="bg-linear-to-r from-bg-color-1 to-bg-color-2 w-screen h-screen flex flex-col gap-10 justify-center items-center">
           <Card {...cards[place - 1]}></Card>
-
+          <div className="w-[25em]">
+            <p className="text-white text-center">
+              {place}/{cards.length}
+            </p>
+            <progress
+              value={place}
+              max={cards.length}
+              className=" bg-green-en"
+            ></progress>
+          </div>
           <button
             className="bg-white p-5 text-xl font-bold rounded-2xl absolute bottom-30 right-2"
             onClick={() => {

@@ -61,3 +61,21 @@ body{
 .back {
   transform: rotateY(180deg);
 }
+
+
+
+progress {
+  /* border-radius: 7px; 
+  width: 80%;
+  height: 22px;
+  margin-left: -11.5%;
+  box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 ); */
+  width: 100%;
+  height: 1em;
+}
+progress::-webkit-progress-bar {
+  background-color: white;
+}
+progress::-webkit-progress-value {
+  background-color: #66CB92;
+}
